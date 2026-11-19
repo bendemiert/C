@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-uint8_t is_minus(int a){
+int8_t is_minus(int a){
  return -a;
 }
 
