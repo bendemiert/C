@@ -1,0 +1,27 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C: Kompilieren und starten",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-c",
+                "gcc -Wall -Wextra -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\" && \"${fileDirname}/${fileBasenameNoExtension}\""
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+                        "presentation": {
+                "echo": false,
+                "showReuseMessage": false,
+                "reveal": "always",
+                "clear": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
+
