@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <inttypes.h>
 
 void bin(uint32_t wert)
 {
@@ -27,10 +28,15 @@ int main(void)
     
     uint16_t daten2[] = { 0xaa, 0xbb, 0xaa, 0xba, 0xca, 0xda, 0xea, 0xfa, 0xaa,0xaa, 0xba, 0xca, 0xda, 0xea, 0xfa, 0xaa, 0xaa, 0xba, 0xca, 0xda, 0xea, 0xfa, 0xaa, 0xaa, 0xba, 0xca, 0xda, 0xea, 0xfa, 0xaa};
 
+
+
     uint32_t *p = daten;
-    printf("%b\n",sizeof(daten));
+    printf("%zu\n",sizeof(daten));
   
-    printf("%i - %i",sizeof(daten),sizeof(daten2));
+    printf("%zu - %zu",sizeof(daten),sizeof(daten2));
+    uint64_t rx = 123456789;
+
+printf("RX: %" PRIu64 "\n", rx);
     
   //  bearbeiten(p, an);
   // for (int i = 0; i < an; i++){ printf("%x  ",*(p+i));}
